@@ -4,9 +4,9 @@ This project investigates the relationship between income and 3 sociodemographic
 By means of EDA (three-way plots and tables) and a stepwise linear regression model, the following questions are answered:
 
 1.	What is the relationship between education and income?
-2.	Is this relationship any different once we take into account gender?
-3.	Is the relationship between education and household income any different depending on a person’s gender?
+2.	Does it vary when age and gender are taken into account?
 
 Results: 
 
-1. The differences in income are more significant across the education levels than between genders.
+1. In Italy the differences in income are significant across the educational levels.
+2. The association between income and education does not vary between men and women.
