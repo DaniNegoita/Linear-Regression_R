@@ -9,4 +9,4 @@ By means of EDA (three-way plots and tables) and a stepwise linear regression mo
 
 Results: 
 
-1. 
+1. The differences in income are more significant across the education levels than between genders.
