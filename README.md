@@ -9,4 +9,5 @@ By means of EDA (three-way plots and tables) and a stepwise linear regression mo
 Results: 
 
 1. In Italy the differences in income are significant across the educational levels.
-2. The association between income and education does not vary between men and women.
+2. The association between income and education does not vary between men and women, whereas it does based upon age that makes it
+stronger (suppressor variable).
