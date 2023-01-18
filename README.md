@@ -12,4 +12,7 @@ Results:
 2. The association between income and education does not vary between men and women, whereas it does based upon age that makes it
 stronger (suppressor variable).
 
+Linear regression model fit:
+
+
 Limitations: 
