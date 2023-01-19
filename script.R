@@ -170,7 +170,7 @@ reg1 <-  lm(income~educ,data = evs_italy)
 summary(reg1)
 # Intercept -> this is the average monthly household income for a low educated respondent
 # Medium and highly educated respondents earn, on average, 656€ and 1443€ more compared to the low educated. 
-# Education explains 16% of the variation in income
+# Education explains 16% of the variation of income in the sample
 
 #Adding gender and age
 reg2 <-  lm(income~educ + gndr + age_c,data = evs_italy)
