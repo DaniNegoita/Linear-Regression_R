@@ -131,7 +131,7 @@ plot2
 ggsave("plots/income_gndr_educ.png", width = 12, height = 8)
 
 #The median household income is higher among highly educated respondents, followed by medium and low educated.There does not appear to be any significant differences
-# across the genders. The distributions are slightly right skewed (= low income) for low- and medium educated men, as well as medium educated women. The opposite
+# across the genders. The distributions are slightly right skewed (= low income) for low- and medium educated men and women. The opposite
 # can be observed for highly educated men and women (left skewed = high income). Interestingly, a few outliers detected on the right hand 
 #of the distribution (= high income values) for all subgroups, exception made for highly educated men. 
 
