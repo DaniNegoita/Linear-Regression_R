@@ -186,9 +186,10 @@ summary(reg2)
 # Model fit-> F(4, 1551) = 78.42, p < 0.0001.
 
 
-#Limitations
-# Average age in the sample is 51 years old
-# Underrepresentation of highly educated respondents
-# Potential model misspecification 
+
+
+
+
+
 
 
