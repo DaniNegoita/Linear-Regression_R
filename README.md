@@ -9,10 +9,11 @@ By means of EDA (multivariate plots) and a stepwise linear regression model, the
 Results: 
 
 1. In Italy the differences in income are significant across the educational levels.
-2. The association between income and education does not vary between men and women, whereas it does based upon age that makes it
+2. The association between income and education does not vary significantly between men and women, whereas it does based upon age that makes it
 stronger (suppressor variable).
 
-Linear regression model fit:
+Model fit:
 
+The F statistic for both regression models yielded statistically significant results meaning that there are statistically significant linear relationships
+between the outcome and predictor variables.
 
-Limitations: 
