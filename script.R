@@ -108,9 +108,8 @@ plot1 <- ggplot(evs_italy,aes(x=income)) +
            y= "")
  plot1 
  ggsave("plots/income_distribution.png", width = 12, height = 8) 
-#Heavily right skewed, unimodal distribution: most of the frequencies pile up at the lower end 
-#of the income scale. The small bumps around 2.158 and 2.577 euros just indicative of
-# of a few cases that have such incomes (most likely outliers).
+#Heavily right skewed, unimodal distribution: most of the frequencies pile up at the lower end  of the income scale. The small bumps around 2.158 and 2.577 euros
+# just indicative of of a few cases that have such incomes (most likely outliers).
  
 #Multivariate plot
 plot2 <- ggplot(evs_italy, aes(x= educ, y=income)) +
@@ -130,14 +129,11 @@ plot2 <- ggplot(evs_italy, aes(x= educ, y=income)) +
                 axis.title.y = element_text(size = 8))
 plot2
 ggsave("plots/income_gndr_educ.png", width = 12, height = 8)
-#The median household income is higher among highly educated respondents, followed
-#by medium and low educated.There does not appear to be any significant differences
-# across the genders. The distributions are slightly right skewed (= low income)
-# for low- and medium educated men, as well as medium educated women. The opposite
-# can be observed for highly educated men and women (left skewed = high income)
-#Interestingly, a few outliers detected on the right hand 
-#of the distribution (= high income values) for all subgroups, exception
-#made for highly educated men. 
+
+#The median household income is higher among highly educated respondents, followed by medium and low educated.There does not appear to be any significant differences
+# across the genders. The distributions are slightly right skewed (= low income) for low- and medium educated men, as well as medium educated women. The opposite
+# can be observed for highly educated men and women (left skewed = high income). Interestingly, a few outliers detected on the right hand 
+#of the distribution (= high income values) for all subgroups, exception made for highly educated men. 
 
 
 plot3 <- ggplot(evs_italy, aes(x= age, y=income)) +
@@ -159,6 +155,7 @@ plot3 <- ggplot(evs_italy, aes(x= age, y=income)) +
 
 plot3
 ggsave("plots/income_gndr_educ_age.png", width = 12, height = 8)
+#Income varies greatly across educational levels (especially, high vs. medium & low) and by age. No differences between men and women. 
 
                      #LINEAR REGRESSION#
 
@@ -172,25 +169,23 @@ round(mean(evs_italy$age_c), 5) #practically 0
 reg1 <-  lm(income~educ,data = evs_italy)
 summary(reg1)
 # Intercept -> this is the average monthly household income for a low educated respondent
-# Medium and highly educated respondents earn, on average, 656€ and 1443€ 
-#more compared to the low educated. 
+# Medium and highly educated respondents earn, on average, 656€ and 1443€ more compared to the low educated. 
 #The R2 explains 16% of the variance of income in the sample
 
 #Adding gender and age
 reg2 <-  lm(income~educ + gndr + age_c,data = evs_italy)
 summary(reg2)
 
-#The intercept slightly decreases and stays statistically significant:this is the 
-#household income for a low educated man of 50 years old
-#The magnitude of the parameters for medium and highly educated increase compared
-#to the previous model: this might be due to the introduction of a suppressor variable.
+#The intercept slightly decreases and stays statistically significant: this is the household income for a low educated man of 50 years old
+#The magnitude of the parameters for medium and highly educated increase compared to the previous model: this might be due to the introduction of a suppressor variable.
 # Women earn on average less but this result is not bolstered by statistical significance.
-# For each year of difference in age, income is estimated to differ by 0.006 euros
-# between 2 randomly selected individuals in the sample.
+# For each year of difference in age, income is estimated to differ by 0.006 euros between 2 randomly selected individuals in the sample.
 #The R2 slightly increases to 17%.
 
 
 #Limitations
-# Overrepresentation of older respondents (mean age = 51 years old) in the sample. 
+# Average age in the sample is 51 years old
 # Underrepresentation of highly educated respondents
 # Potential model misspecification 
+
+
