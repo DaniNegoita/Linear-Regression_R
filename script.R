@@ -40,7 +40,7 @@ evs_italy <- rename(evs_italy, gndr = v225, educ = v243_r, income = v261_ppp)
 #Save the working dataset
 save(evs_italy,file = "working/evs_italy.RData")
 rm(evs)
-------------------------------------------#Data processing#--------------------
+------------------------------------------#DATA PROCESSING#--------------------
 
                                   #Recode missing values#
 
@@ -89,7 +89,7 @@ evs_italy$income <- as.numeric(evs_italy$income)
 
 
 
-------------------------##Exploratory Data Analysis#----------------
+                                         ------------------------##EXPLORATORY DATA ANALYSIS#----------------
 #Frequency table income
 table(evs_italy$income)
  #The occurring values are 0.689, 1.139, 1.499, 1.858,2.158, 2.577,
@@ -157,7 +157,7 @@ plot3
 ggsave("plots/income_gndr_educ_age.png", width = 12, height = 8)
 #Income varies greatly across educational levels (especially, high vs. medium & low) and by age. No differences between men and women. 
 
-                     #LINEAR REGRESSION#
+                   ----------------------------------- #LINEAR REGRESSION# -------------------------------------------------------------------
 
 #Grand mean centering Age for a substantive interpretation of the constant
 mean(evs_italy$age) #overall sample mean age is 51 years old
@@ -171,6 +171,8 @@ summary(reg1)
 # Intercept -> this is the average monthly household income for a low educated respondent
 # Medium and highly educated respondents earn, on average, 656€ and 1443€ more compared to the low educated. 
 # Education explains 16% of the variation of income in the sample
+# Model fit -> F(2, 1553) = 148.8, p < 0.0001.
+
 
 #Adding gender and age
 reg2 <-  lm(income~educ + gndr + age_c,data = evs_italy)
@@ -181,6 +183,7 @@ summary(reg2)
 # Women earn on average less but this result is not bolstered by statistical significance.
 # For each year of difference in age, income is estimated to differ by 0.006 euros between 2 randomly selected individuals in the sample.
 # Adding gender and age slightly increases the R2 to 17%, ergo weak explanatory power.
+# Model fit-> F(4, 1551) = 78.42, p < 0.0001.
 
 
 #Limitations
