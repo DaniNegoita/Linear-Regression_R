@@ -23,6 +23,5 @@ stronger (suppressor variable).
 
 #Model goodness of fit
 
-The F statistic for both regression models yielded statistically significant results meaning that there are statistically significant linear relationships
-between the outcome and predictor variables.
+The linear models fit the data well (significant F statistics).
 
