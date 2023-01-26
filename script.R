@@ -170,8 +170,9 @@ reg1 <-  lm(income~educ,data = evs_italy)
 summary(reg1)
 # Intercept -> this is the average monthly household income for a low educated respondent
 # Medium and highly educated respondents earn, on average, 656€ and 1443€ more compared to the low educated. 
+
 # Education explains 16% of the variation of income in the sample
-# Model fit -> F(2, 1553) = 148.8, p < 0.0001.
+# F(2, 1553) = 148.8, p < 0.0001. 
 
 
 #Adding gender and age
@@ -182,8 +183,9 @@ summary(reg2)
 #The magnitude of the parameters for medium and highly educated increase compared to the previous model: this might be due to the introduction of a suppressor variable.
 # Women earn on average less but this result is not bolstered by statistical significance.
 # For each year of difference in age, income is estimated to differ by 0.006 euros between 2 randomly selected individuals in the sample.
-# Adding gender and age slightly increases the R2 to 17%, ergo weak explanatory power.
-# Model fit-> F(4, 1551) = 78.42, p < 0.0001.
+
+# Adding gender and age slightly increases the R2 to 17%.
+#  F(4, 1551) = 78.42, p < 0.0001.
 
 
 
