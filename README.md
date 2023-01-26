@@ -23,5 +23,5 @@ stronger (suppressor variable).
 
 #Model goodness of fit
 
-The linear models fit the data well (significant F statistics).
+The linear models fit the data well (significant F statistics). The proportion of explained variance (R2) is, respectively, 16% and 17% in the 1st and 2nd model.
 
